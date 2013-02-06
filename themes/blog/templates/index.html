@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Tous les articles - {{ SITENAME }}{% endblock %}
+{% block content %}
+<a id="rss" href="{{ SITEURL }}/feeds/all-fr.atom.xml" title="Flux Atom"><img src="{{SITEURL}}/theme/img/rss.png" alt="Flux Atom" /></a>
+<h1>Tous les articles</h1>
+<ul>
+{% for article in articles_page.object_list %}
+  <li><h2><i class="icon-angle-right"></i><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2></li>
+{% endfor %}
+</ul>
+{% endblock content %}
+{% block footer %}
+<p>Blog personnel de <a href="http://alex.henriet.eu" title="Curriculum Vitae {{ AUTHOR }}">{{ AUTHOR }}</a> - Licence <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.fr" title="CC BY-SA">CC BY-SA</a></a></p>
+<p></p>
+{% endblock %}

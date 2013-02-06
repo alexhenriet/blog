@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block title %}{{ article.title }} - {{ SITENAME }}{% endblock %}
+{% block content %}
+<h1>{{ article.title }}</h1>
+{{ article.content }}
+<p class="last-update">Dernière mise à jour le {{ article.date.strftime('%d/%m/%Y') }}</p>
+{% endblock %}
+{% block footer %}
+<a class="backtop" href="#" title="Haut de la page"><i class="icon-arrow-up"></i></a>
+<h2><i class="icon-angle-right"></i> <a href="{{ SITEURL }}/" title="Tous les articles">Tous les articles</a></h2>
+{% endblock %}
