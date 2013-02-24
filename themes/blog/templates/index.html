@@ -3,7 +3,7 @@
 {% block content %}
 <a id="rss" href="{{ SITEURL }}/feeds/all-fr.atom.xml" title="Flux Atom"><img src="{{SITEURL}}/theme/img/rss.png" alt="Flux Atom" /></a>
 <h1>Tous les articles</h1>
-<ul>
+<ul class="naked">
 {% for article in articles_page.object_list %}
   <li><h2><i class="icon-angle-right"></i><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h2></li>
 {% endfor %}
