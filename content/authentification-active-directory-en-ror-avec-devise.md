@@ -191,7 +191,7 @@ Il est désormais possible de se loguer via le formulaire présenté par l'appli
     Completed 302 Found in 137ms (ActiveRecord: 0.0ms)
 
 
-## Pour aller plus loin:
+## Pour aller plus loin
 
 * [https://github.com/plataformatec/devise](https://github.com/plataformatec/devise)
 * [https://github.com/cschiewek/devise_ldap_authenticatable](https://github.com/cschiewek/devise_ldap_authenticatable)
