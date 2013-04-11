@@ -76,6 +76,10 @@ h1 {
     margin-bottom: 25px;
 }
 
+h3 {
+    color: #db4714;
+}
+
 a {
 color: #1982D1;
 text-decoration: none;
@@ -202,6 +206,9 @@ textarea {
 
 #rss {
     float: right;
+}
+
+#toc {
 }
 
 /* ==========================================================================
