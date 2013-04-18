@@ -101,7 +101,7 @@ Yapuka lancer **helloworld.py** et cliquer sur le bouton.
 <img class="border" alt="PyQT4 Hello world" src="./theme/img/pyqt4.png" />
 
 
-## Pour aller plus loin :
+## Pour aller plus loin
 
 * [http://www.riverbankcomputing.co.uk/software/pyqt/](http://www.riverbankcomputing.co.uk/software/pyqt/)
 * [http://zetcode.com/tutorials/pyqt4/](http://zetcode.com/tutorials/pyqt4/)

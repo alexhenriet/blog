@@ -208,95 +208,26 @@ textarea {
     float: right;
 }
 
-#toc {
-}
-
-/* ==========================================================================
-   Media Queries
-   ========================================================================== */
-
-@media only screen and (min-width: 480px) {
-
-}
-
-@media only screen and (min-width: 768px) {
-
-
-/* ============
-    WIDE: Menu
-   ============ */
-
-    .title {
-        float: left;
-    }
-
-/* ============
-    WIDE: Main
-   ============ */
-
-    .main article {
-        width: 100%;
-    }
-}
-
-@media only screen and (min-width: 1140px) {
-
-/* ===============
-    Maximal Width
-   =============== */
-
-    .wrapper {
-        width: 700px;
-        margin: 0 auto;
-    }
-}
-
-/* ==========================================================================
-   Helper classes
-   ========================================================================== */
-
-.ir {
-    background-color: transparent;
-    border: 0;
-    overflow: hidden;
-    *text-indent: -9999px;
-}
-
-.ir:before {
-    content: "";
-    display: block;
-    width: 0;
-    height: 150%;
-}
-
-.hidden {
-    display: none !important;
-    visibility: hidden;
-}
-
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
+#navbar {
+    display: none;
+    background: #1982D1;
+    width: 30px;
+    list-style: none;
     padding: 0;
-    position: absolute;
-    width: 1px;
-}
-
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
     margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
+    font-size: 14px;
+    text-align: center;
+    position: fixed;
+    top: 40%;
+    right: 20px;
+    zoom: 1;
+    filter: alpha(opacity=50);
+    opacity: 0.7;
 }
 
-.invisible {
-    visibility: hidden;
+#navbar a {
+    color: #fff;
+    font-weight: normal;
 }
 
 .clearfix:before,
@@ -311,6 +242,38 @@ textarea {
 
 .clearfix {
     *zoom: 1;
+}
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+
+    .title {
+        float: left;
+    }
+
+    .main article {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+    #navbar {
+        display: block;
+    }
+
+    .wrapper {
+        width: 700px;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 1140px) {
+
 }
 
 /* ==========================================================================
