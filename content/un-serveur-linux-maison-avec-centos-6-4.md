@@ -158,6 +158,7 @@ On configure **Squid** pour utiliser l'helper d'authentification **ncsa_auth**.
     visible_hostname mabox
     http_port 127.0.0.1:3128 # On écoute uniquement sur l'IP locale
     $ /etc/init.d/squid restart
+    $ chkconfig squid on
     $ netstat -an |grep 3128
     tcp        0      0 127.0.0.1:3128              0.0.0.0:*                   LISTEN
 
@@ -247,6 +248,7 @@ On configure le service **ntp** pour que le système reste à l'heure juste.
     server 195.13.23.5
     $ /etc/init.d/ntpdate start
     ntpdate: Synchronizing with time server: [  OK  ]
+    $ chkconfig ntpdate on
 
 ## Prévention des intrusions
 
@@ -262,6 +264,7 @@ On installe **fail2ban** pour se prémunir des attaques par force brute sur le s
     logpath  = /var/log/secure
     maxretry = 3
     $ /etc/init.d/fail2ban restart
+    $ chkconfig fail2ban on
 
 Pour débloquer un hôte spécifique avant l'échéance du ban.
 
@@ -299,6 +302,7 @@ des mises à jour de paquets sont disponibles.
     MAILTO=alex.henriet@gmail.com
     $ /etc/init.d/yum-cron start
     Activation de la mise à jour nocturne par yum :            [  OK  ]
+    $ chkconfig yum-cron on
 
 ## Pour aller plus loin
 
