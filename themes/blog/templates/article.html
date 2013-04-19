@@ -3,9 +3,9 @@
 {% block content %}
 <h1>{{ article.title }}</h1>
 <ul id="navbar">
-    <li><a href="#" title="Haut de la page"><i class="icon-chevron-up"></i></a></li>
+    <li><a id="toplink" href="#" title="Haut de la page"><i class="icon-chevron-up"></i></a></li>
     <li><a href="{{ SITEURL }}/" title="Tous les articles"><i class="icon-chevron-left"></i></a></li>
-    <li><a href="#bottom" title="Bas de la page"><i class="icon-chevron-down"></i></a></li>
+    <li><a id="botlink" href="#bottom" title="Bas de la page"><i class="icon-chevron-down"></i></a></li>
     <li><a href="https://twitter.com/intent/tweet?url={{ 'http://blog.henriet.eu/'|quoteplus + article.url|quoteplus }}&via=henrietalex"
            title="Partager sur Twitter"><i class="icon-twitter"></i></a></li>
 </ul>
@@ -19,23 +19,5 @@
 <div id="bottom"></div>
 {% endblock %}
 {% block javascript %}
-<script type="text/javascript">
-function slugify(text) {
-  text = text.replace(/[èéêë]/g, 'e');
-  text = text.replace(/[ìíîï]/g, 'i');
-  text = text.replace(/[àáâãäå]/g, 'a');
-  text = text.replace(/[ô]/g, 'o');
-  text = text.replace(/[\s+']/g, '_');
-  text = text.replace(/[^a-zA-Z0-9\-_]/g,'');
-  return text.toLowerCase();
-};
-$(document).ready(function() {
-  $("article h2").each(function() {
-    this.id = slugify(this.innerHTML);
-  });
-  $("#toc").stoc({
-    search: "article", start: 2, depth: 1, smoothScroll: 0, stocTitle: '<h2>Table des matières</h2>',
-  });
-});
-</script>
+<script src="{{ SITEURL }}/theme/js/main.js"></script>
 {% endblock %}

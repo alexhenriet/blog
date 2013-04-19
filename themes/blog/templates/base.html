@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ SITEURL }}/theme/css/main.css">
     <script src="{{ SITEURL }}/theme/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    <script src="{{ SITEURL }}/theme/js/vendor/jquery-1.9.0.min.js"></script>
+    <script src="{{ SITEURL }}/theme/js/vendor/jquery.stoc.js"></script>
+    {% block javascript %}{% endblock %}
   </head>
   <body id="{% block mainid %}{% endblock %}">
     <div class="main-container">
@@ -27,9 +30,6 @@
         {% block footer %}{% endblock %}
       </div>
     </div>
-    <script src="{{ SITEURL }}/theme/js/vendor/jquery-1.9.0.min.js"></script>
-    <script src="{{ SITEURL }}/theme/js/vendor/jquery.stoc.js"></script>
-    {% block javascript %}{% endblock %}
     <script>
       var _gaq=[['_setAccount','UA-15076021-7'],['_trackPageview']];
       (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
