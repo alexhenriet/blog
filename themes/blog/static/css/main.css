@@ -3,8 +3,7 @@
     src: url('/theme/fonts/YanoneKaffeesatz-Thin-webfont.eot');
     src: url('/theme/fonts/YanoneKaffeesatz-Thin-webfont.eot?#iefix') format('embedded-opentype'),
          url('/theme/fonts/YanoneKaffeesatz-Thin-webfont.woff') format('woff'),
-         url('/theme/fonts/YanoneKaffeesatz-Thin-webfont.ttf') format('truetype'),
-         url('/theme/fonts/YanoneKaffeesatz-Thin-webfont.svg#YanoneKaffeesatzThin') format('svg');
+         url('/theme/fonts/YanoneKaffeesatz-Thin-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 
@@ -15,8 +14,7 @@
     src: url('/theme/fonts/YanoneKaffeesatz-Light-webfont.eot');
     src: url('/theme/fonts/YanoneKaffeesatz-Light-webfont.eot?#iefix') format('embedded-opentype'),
          url('/theme/fonts/YanoneKaffeesatz-Light-webfont.woff') format('woff'),
-         url('/theme/fonts/YanoneKaffeesatz-Light-webfont.ttf') format('truetype'),
-         url('/theme/fonts/YanoneKaffeesatz-Light-webfont.svg#YanoneKaffeesatzLight') format('svg');
+         url('/theme/fonts/YanoneKaffeesatz-Light-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 
@@ -27,8 +25,7 @@
     src: url('/theme/fonts/YanoneKaffeesatz-Regular-webfont.eot');
     src: url('/theme/fonts/YanoneKaffeesatz-Regular-webfont.eot?#iefix') format('embedded-opentype'),
          url('/theme/fonts/YanoneKaffeesatz-Regular-webfont.woff') format('woff'),
-         url('/theme/fonts/YanoneKaffeesatz-Regular-webfont.ttf') format('truetype'),
-         url('/theme/fonts/YanoneKaffeesatz-Regular-webfont.svg#YanoneKaffeesatzRegular') format('svg');
+         url('/theme/fonts/YanoneKaffeesatz-Regular-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 
@@ -39,8 +36,7 @@
     src: url('/theme/fonts/YanoneKaffeesatz-Bold-webfont.eot');
     src: url('/theme/fonts/YanoneKaffeesatz-Bold-webfont.eot?#iefix') format('embedded-opentype'),
          url('/theme/fonts/YanoneKaffeesatz-Bold-webfont.woff') format('woff'),
-         url('/theme/fonts/YanoneKaffeesatz-Bold-webfont.ttf') format('truetype'),
-         url('/theme/fonts/YanoneKaffeesatz-Bold-webfont.svg#YanoneKaffeesatzBold') format('svg');
+         url('/theme/fonts/YanoneKaffeesatz-Bold-webfont.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 
