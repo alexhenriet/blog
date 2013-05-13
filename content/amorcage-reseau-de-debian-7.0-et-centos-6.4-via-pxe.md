@@ -132,4 +132,4 @@ Il est facile de tester le setup avec **[Virtualbox](https://www.virtualbox.org/
 
 - [https://fr.wikipedia.org/wiki/Preboot_Execution_Environment](https://fr.wikipedia.org/wiki/Preboot_Execution_Environment)
 - [http://www.syslinux.org/wiki/index.php/PXELINUX](http://www.syslinux.org/wiki/index.php/PXELINUX)
-
+- [https://help.ubuntu.com/community/UbuntuLTSP/ProxyDHCP](https://help.ubuntu.com/community/UbuntuLTSP/ProxyDHCP)
