@@ -14,15 +14,4 @@ $(document).ready(function() {
   $("#toc").stoc({
     search: "article", start: 2, depth: 1, smoothScroll: 0, stocTitle: '<h2>Table des matières</h2>',
   });
-  /*
-  $('#toplink').click(function(e){
-     e.preventDefault();
-     $('html, body').animate({scrollTop: 0}, 3000);
-  });
-  $('#botlink').click(function(e){
-     e.preventDefault();
-     var offset = $('#bottom').offset().top;
-     $('html, body').animate({scrollTop: offset}, 3000);
-  });
-  */
 });

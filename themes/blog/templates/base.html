@@ -1,25 +1,21 @@
 <!DOCTYPE html>
-<html lang="fr" class="no-js">
+<html lang="fr">
   <head>
     <title>{%block title %}{{ SITENAME }}{% endblock %}</title>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="{{ AUTHOR }}">
     <meta name="description" content="Blog personnel de {{ AUTHOR }}">
-    <meta name="keywords" content="{{ AUTHOR }} Setsuna Blog PHP Python Ruby PHP Linux"/>
-    <meta name="viewport" content="width=device-width">
+    <meta name="keywords" content="{{ AUTHOR }} Blog PHP Python Ruby PHP Linux"/>
+    <link rel="shortcut icon" type="image/x-icon" href="{{ SITEURL }}/theme/favicon.ico" />
     <link rel="alternate" type="application/atom+xml" title="Flux atom" href="{{ SITEURL }}/feeds/all-fr.atom.xml">
-    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/normalize.min.css">
-    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/main.css">
-    <script src="{{ SITEURL }}/theme/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-    <script src="{{ SITEURL }}/theme/js/vendor/jquery-1.9.0.min.js"></script>
-    <script src="{{ SITEURL }}/theme/js/vendor/jquery.stoc.js"></script>
-    {% block javascript %}{% endblock %}
+    <link rel="stylesheet" href="{{ SITEURL }}/theme/css/merged.min.css">
+    <script src="{{ SITEURL }}/theme/js/merged.min.js"></script>
   </head>
-  <body id="{% block mainid %}{% endblock %}">
+  <body id="{% block mainid %}HOME{% endblock %}">
     <div class="main-container">
-      <div class="main wrapper clearfix"> 
+      <div class="main wrapper clearfix">
         <article>
           {% block content %}{% endblock %}
         </article>
@@ -30,11 +26,5 @@
         {% block footer %}{% endblock %}
       </div>
     </div>
-    <script>
-      var _gaq=[['_setAccount','UA-15076021-7'],['_trackPageview']];
-      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-      g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-      s.parentNode.insertBefore(g,s)}(document,'script'));
-    </script>
   </body>
 </html>
