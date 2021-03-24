@@ -73,16 +73,16 @@ h1 {
 }
 
 h3 {
-    color: #db4714;
+    color: #848484;
 }
 
 a {
-color: #1982D1;
+color: #777777;
 text-decoration: none;
 }
 
 a:hover {
-color: #235D88;
+color: #555555;
 }
 
 p {
@@ -116,13 +116,14 @@ li p {
 
 pre {
   font-size: 0.9em;
-  background-color: #222222;
+  background-color: #f7f7f7;
   overflow: auto;
-  color: white;
-  padding: .7em;
+  color: #555555;
+  padding: 20px;
   margin-bottom: 30px;
   white-space: pre;
   word-wrap: normal;
+
 }
 
 ::-moz-selection {
@@ -175,10 +176,6 @@ textarea {
     margin: 0 5%;
 }
 
-.main-container {
-    margin-top: 50px;
-}
-
 .main {
     padding: 30px 0;
 }
@@ -206,7 +203,7 @@ textarea {
 
 #navbar {
     display: none;
-    background: #1982D1;
+    background: #777777;
     width: 30px;
     list-style: none;
     padding: 0;
@@ -240,11 +237,6 @@ textarea {
     *zoom: 1;
 }
 
-#disqus_thread {
-    margin-top: 70px;
-}
-
-
 /* ==========================================================================
    Media Queries
    ========================================================================== */
@@ -266,10 +258,6 @@ textarea {
         display: block;
     }
 
-    .wrapper {
-        width: 700px;
-        margin: 0 auto;
-    }
 }
 
 @media only screen and (min-width: 1140px) {

@@ -12,7 +12,7 @@ DEFAULT_PAGINATION = 0
 THEME = 'themes/blog'
 
 def quoteplus_filter(url):
-    return urllib.parse.quote_plus(url)
+    return urllib.quote_plus(url)
 
 JINJA_FILTERS = {
     'quoteplus': quoteplus_filter,
