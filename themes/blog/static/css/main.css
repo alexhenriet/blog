@@ -77,12 +77,12 @@ h3 {
 }
 
 a {
-color: #777777;
+color: #1982d1;
 text-decoration: none;
 }
 
 a:hover {
-color: #555555;
+color: #235d88;
 }
 
 p {
@@ -202,8 +202,10 @@ textarea {
 }
 
 #navbar {
+    border-radius: 9px;
     display: none;
-    background: #777777;
+    background: #282828;
+    color: #efefef;
     width: 30px;
     list-style: none;
     padding: 0;
@@ -236,6 +238,30 @@ textarea {
 .clearfix {
     *zoom: 1;
 }
+
+/* Scrollbars */ 
+
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #efefef #282828;
+  }
+  
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: #282828;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: #efefef;
+    /*border-radius: 20px;*/
+    border: 3px solid #282828;
+  }
+
 
 /* ==========================================================================
    Media Queries
