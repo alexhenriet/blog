@@ -116,9 +116,9 @@ li p {
 
 pre {
   font-size: 0.9em;
-  background-color: #f7f7f7;
+  background-color: #282828;
   overflow: auto;
-  color: #555555;
+  color: #efefef;
   padding: 20px;
   margin-bottom: 30px;
   white-space: pre;
