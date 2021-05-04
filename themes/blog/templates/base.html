@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="{% block lang %}fr{% endblock %}">
   <head>
     <title>{%block title %}{{ SITENAME }}{% endblock %}</title>
     <meta charset="utf-8">
@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="{{ AUTHOR }}">
     <meta name="description" content="Blog personnel de {{ AUTHOR }}">
-    <meta name="keywords" content="{{ AUTHOR }} Blog PHP Python Ruby PHP Linux"/>
+    <meta name="keywords" content="{{ AUTHOR }} Blog PHP Symfony Python Ruby Debian Archlinux Linux"/>
     <link rel="shortcut icon" type="image/x-icon" href="{{ SITEURL }}/theme/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="{{ SITEURL }}/theme/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="{{ SITEURL }}/theme/favicon-32x32.png">
@@ -27,8 +27,11 @@
     </div>
     <div class="footer-container">
       <div class="footer wrapper clearfix">
-        {% block footer %}{% endblock %}
+        {% block footer %}
+        <p>Blog personnel de <a href="https://alex.henriet.eu" title="Curriculum Vitae {{ AUTHOR }}">{{ AUTHOR }}</a> - <a href="{{ SITEURL }}/pages/legal.html" title="Legal">Mentions légales</a> - Licence <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.fr" title="CC BY-SA">CC BY-SA</a></p>
+        {% endblock %}
       </div>
     </div>
+    {% block javascript %}{% endblock %}
   </body>
 </html>

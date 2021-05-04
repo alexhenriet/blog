@@ -17,7 +17,7 @@ function styles() {
 gulp.task(styles);
 
 function scripts() {
-  return gulp.src(['./js/vendor/jquery-1.12.4.min.js','./js/vendor/jquery.stoc.js','./js/main.js'])
+  return gulp.src(['./js/vendor/jquery-1.12.4.min.js','./js/vendor/jquery.stoc.js'])
     .pipe(concat('merged.js'))
     .pipe(rename({suffix: '.min'}))
     .pipe(uglify())

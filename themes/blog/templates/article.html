@@ -1,20 +1,67 @@
 {% extends "base.html" %}
+
+{% if article.lang == "en" %}
+    {% block lang %}en{% endblock %}
+{% endif %}
+
 {% block title %}{{ article.title }} - {{ SITENAME }}{% endblock %}
+
 {% block content %}
 <h1>{{ article.title }}</h1>
 <ul id="navbar">
-    <li><a id="toplink" href="#" title="Haut de la page"><i class="icon-chevron-up"></i></a></li>
-    <li><a href="{{ SITEURL }}/" title="Tous les articles"><i class="icon-chevron-left"></i></a></li>
-    <li><a id="botlink" href="#bottom" title="Bas de la page"><i class="icon-chevron-down"></i></a></li>
+    <li>
+        <a id="toplink" href="#" title="{% if article.lang == "en" %}Top of the page{% else %}Haut de la page{% endif %}"><i class="icon-chevron-up"></i></a>
+    </li>
+    <li><a href="{{ SITEURL }}/" title="{% if article.lang == "en" %}All the articles{% else %}Tous les articles{% endif %}"><i class="icon-chevron-left"></i></a></li>
+    <li><a id="botlink" href="#bottom" title="{% if article.lang == "en" %}Bottom of the page{% else %}Bas de la page{% endif %}"><i class="icon-chevron-down"></i></a></li>
     <li><a href="https://twitter.com/intent/tweet?url={{ 'http://blog.henriet.eu/'|quoteplus + article.url|quoteplus }}&via=henrietalex"
-           title="Partager sur Twitter"><i class="icon-twitter"></i></a></li>
+           title="{% if article.lang == "en" %}Share on Twitter{% else %}Partager sur Twitter{% endif %}"><i class="icon-twitter"></i></a></li>
 </ul>
 <div id="toc"></div>
 {{ article.content }}
-<p class="last-update">Dernière mise à jour le {{ article.date.strftime('%d/%m/%Y') }}</p>
+<p class="last-update">
+    {% if article.lang == "en" %}
+        Last update on {{ article.date.strftime('%Y-%m-%d') }}
+    {% else %}
+        Dernière mise à jour le {{ article.date.strftime('%d/%m/%Y') }}
+    {% endif %}
+
+</p>
+<div id="bottom" style="margin-top: 100px; clear: both;">
+<a class="backtop" href="#" title="{% if article.lang == "en" %}Top of the page{% else %}Haut de la page{% endif %}"><i class="icon-chevron-up"></i></a>
+</div>
+<h4 style="font-size:1.5em;"><i class="icon-angle-right"></i> <a href="{{ SITEURL }}/" title="{% if article.lang == "en" %}All the articles{% else %}Tous les articles{% endif %}">{% if article.lang == "en" %}All the articles{% else %}Tous les articles{% endif %}</a></h4>
 {% endblock %}
-{% block footer %}
-<a class="backtop" href="#" title="Haut de la page"><i class="icon-chevron-up"></i></a>
-<h2><i class="icon-angle-right"></i> <a href="{{ SITEURL }}/" title="Tous les articles">Tous les articles</a></h2>
-<div id="bottom"></div>
+
+{% if article.lang == "en" %}
+    {% block footer %}
+    <p>Personal blog of <a href="https://alex.henriet.eu" title="Curriculum Vitae {{ AUTHOR }}">{{ AUTHOR }}</a> - <a href="{{ SITEURL }}/pages/legal.html" title="Legal">Legal</a> - License <a href="http://creativecommons.org/licenses/by-sa/3.0/deed.fr" title="CC BY-SA">CC BY-SA</a></p>
+    {% endblock %}
+{% endif %}
+
+{% block javascript %}
+<script type="text/javascript">
+{% if article.lang == "en" %}
+  var title = 'Table of contents';
+{% else %}
+  var title = 'Table des matières';
+{% endif %}    
+function slugify(text) {
+    text = text.replace(/[èéêë]/g, 'e');
+    text = text.replace(/[ìíîï]/g, 'i');
+    text = text.replace(/[àáâãäå]/g, 'a');
+    text = text.replace(/[ô]/g, 'o');
+    text = text.replace(/[\s+']/g, '_');
+    text = text.replace(/[^a-zA-Z0-9\-_]/g,'');
+    return text.toLowerCase();
+  };
+  $(document).ready(function() {
+    $("article h2").each(function() {
+      this.id = slugify(this.innerHTML);
+    });
+    $("#toc").stoc({
+      search: "article", start: 2, depth: 1, smoothScroll: 0, stocTitle: '<h2>' + title + '</h2>',
+    });
+  });  
+</script>  
 {% endblock %}
